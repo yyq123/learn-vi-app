@@ -1,0 +1,21 @@
+ECHO "The first variable is '$1'=$1";
+
+login $1 $2 on $3;
+
+spool on to 'D:\Restructure.log';
+
+/* Disable the connections */
+alter application $4 disable connects;
+
+/* Logout all the sessions */
+alter system logout session on application $4;
+
+/* Kill all the requests */
+alter system kill request on application $4;
+
+/* Dense Restructure */
+alter database $4.$5 force restructure;
+
+/* Enable the connections */
+alter application $4 enable connects;
+
