@@ -12,10 +12,12 @@ http://www.flickr.com/photos/yyq123/5435807280/
 
 Installation:
 -------------
-1. Copy csc.vim to: ~/.vim/syntax/mxl.vim or c:\program files\vim\vimfiles\syntax\mxl.vim
-2. Add the following three lines of commands to $VIMHOME\filetype.vim
-   augroup filetypedetect
-   au BufNewFile,BufRead *.mxl			setf mxl
-   augroup END
- 
+1. Copy csc.vim to: ~/.vim/syntax/mxl.vim or 
+$VIMFILES\syntax\mxl.vim
+
+2. Add the following ommands to your vimrc file:
+augroup filetypedetect
+   au BufNewFile,BufRead *.msh setfiletype mxl
+   au BufNewFile,BufRead *.mxl setfiletype mxl
+augroup END 
 

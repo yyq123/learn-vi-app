@@ -16,9 +16,14 @@ http://www.flickr.com/photos/yyq123/5382671335/
 
 
 install details
-Copy csc.vim to:
-~/.vim/syntax/csc.vim
-   or
-c:\program files\vim\vimfiles\syntax\csc.vim
+
+1. Copy csc.vim to: ~/.vim/syntax/csc.vim or
+$VIMFILES\syntax\csc.vim
+
+2. Add the following commands to your vimrc file:
+augroup filetypedetect
+   au BufNewFile,BufRead *.csc setfiletype csc
+augroup END
+
  
 
