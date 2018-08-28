@@ -17,7 +17,7 @@ sy	keyword	mxlTodo contained TODO FIXME XXX
 sy	cluster mxlCommentGroup contains=mxlTodo
 
 "substitution variable
-sy	region	mxlSubVar	start="&" end="\>"he=s-1 
+sy	region	mxlSubVar	start="&" end="\>"he=s-1
 sy	region	mxlEnvVar	start="\$" end="\>"he=s-1
 
 " Strings in quotes
@@ -69,24 +69,24 @@ sy	keyword	mxlCondition	IF ELSE ENDIF ELSEIF
 sy	keyword	mxlCondition	contained IF ELSE ENDIF ELSEIF
  
 
-sy	keyword	mxlStatement	abort about account_type active add advanced after aggregate_missing algorithm alias alias_table all allow alter and any append application apply archive are area as associated at autostartup
-sy	keyword	mxlStatement	begin bitmap blocks buffered but by
-sy	keyword	mxlStatement	cache_pinning calc_formula calculation cascade change_file clear column_width columns commands comment commitblock committed_mode compression connect connects consolidation constituent copy create create_application create_blocks create_user created currency currency_category currency_conversion currency_database currency_member current custom
-sy	keyword	mxlStatement	data data_cache_size data_file data_file_cache_size data_storage database days default definition definition_only definitions delete designer dimension dimensions direct direction directories directory disable disallow disk display division drop
+sy	keyword	mxlStatement	abort about absolute_value account_type active add advanced after aggregate_assume_equal aggregate_missing aggregate_storage aggregate_sum aggregate_view aggregate_use_last algorithm alias alias_names alias_table all all_users_groups alloc_rule allow allow_merge alter alternate_rollups amountcontext amounttimespan and any append application application_access_type apply archive archive_file are area attribute attribute_calc attribute_info attribute_spec attribute_to_base_member_association as aso_level_info associated at auto_password autostartup
+sy	keyword	mxlStatement	backup_file basistimespan basistimespanoptions before begin bitmap blocks buffer_id buffered build but by
+sy	keyword	mxlStatement	cache_pinning cache_size calc_formula calculation calc_script calc_string calculation cascade cell_status change_file clear cnt_sempaphore column_width columns combinebasis commands comment commitblock committed_mode compression connect connects consolidation constituent copy copy_subvar copy_useraccess create create_application create_blocks create_user creditmember created cube_size_info currency currency_category currency_conversion currency_database currency_member currency_rate current custom
+sy	keyword	mxlStatement	data data_block data_cache_size data_file data_file_cache_size data_storage database days dbstats default definition definition_only definitions delete designer dimension dimensions direct direction directories directory disable disallow disk display division drop
 sy	keyword	mxlStatement	echo elsewhere enable end error example, excel execute exit export export_directory external
 sy	keyword	mxlStatement	file file_size file_type filter filter_access for force freespace from full function
-sy	keyword	mxlStatement	gave gb grant group groups
+sy	keyword	mxlStatement	gave gb get grant group groups
 sy	keyword	mxlStatement	ha_trace hostname
 sy	keyword	mxlStatement	identified if immediate implicit_commit import in inactive_user_days index index_cache_size index_data index_page_size indicated information input invalid_block_headers invalid_login_limit io_access_mode it its
-sy	keyword	mxlStatement	kb key kill	
+sy	keyword	mxlStatement	kb key kill
 sy	keyword	mxlStatement	level0 linked linked-reporting load local location location-alias lock lock_timeout logfile login logout lotus_2 lotus_3 lotus_4 lro
-sy	keyword	mxlStatement	macro mapped max_lro_file_size mb member member_property minimum mining minutes mmbers model move multiplication
+sy	keyword	mxlStatement	macro mapped max_lro_file_size mb member member_calculation member_info member_property minimum mining minutes mmbers model move multiplication
 sy	keyword	mxlStatement	name never no_access none nonunicode_mode note nothing number
 sy	keyword	mxlStatement	object of off on only optional optional_group or outline
 sy	keyword	mxlStatement	particular partition partition_size password password_reset_days path performance permission phrase ports pre_image_access preserve private privilege property protocol purge query
 sy	keyword	mxlStatement	read recover refresh remote remove rename repair replace replicated report_file request request_history reset restructure retrieve_buffer_size retrieve_sort retrieve_sort_buffer_size reverse rle row rows rules_file runtime
 sy	keyword	mxlStatement	scope seconds security security_backup server session session, session_idle_limit session_idle_poll sessionforce sessions set settings shell shutdown single singlecell software spec specified spool startup stop supervisor sync system system-wide
-sy	keyword	mxlStatement	task tb template text that the to trigger two_pass_calc type
+sy	keyword	mxlStatement	task tb template text that the to transactions trigger two_pass_calc type
 sy	keyword	mxlStatement	uda unicode unicode_mode unlimited unload unlock update updated updates user users using
 sy	keyword	mxlStatement	validate variable vector version volume
 sy	keyword	mxlStatement	where with write
