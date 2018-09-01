@@ -1,0 +1,22 @@
+rle.vim : Hyperion Financial Management (HFM) rule syntax file
+
+
+description
+
+Hyperion Financial Management (HFM) rule syntax file, should be up-to-date with all features of HFM 11.  If anything is missing, broken, not working well on your setup, or an inconvenience for you, please let me know, all feedback is welcome: <yyq123 at gmail.com>.
+
+Screenshots:
+-------------
+https://www.flickr.com/photos/yyq123/30529478388/
+
+
+Installation:
+-------------
+1. Copy rle.vim to: ~/.vim/syntax/rle.vim or
+$VIMFILES\syntax\rle.vim
+
+2. Add the following ommands to your vimrc file:
+augroup filetypedetect
+   au BufNewFile,BufRead *.rle setfiletype rle
+augroup END
+
