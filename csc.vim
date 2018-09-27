@@ -63,6 +63,11 @@ sy	match	cscFix	"FIX\|ENDFIX"
 "substitution variable
 sy	region	cscSubVar	start="&" end="\>"he=s-1 
 
+"environment variable
+sy	region	cscEnvVar	start="$" end="\>"he=s-1 
+
+
+
 "cross-dimension operator
 sy	match	cscCrossDimen	"->"
 
@@ -82,7 +87,7 @@ sy	keyword	cscFunction	contained IRSIBLINGS IRR INTEREST INT ILSIBLINGS IDESCEND
 sy	keyword	cscFunction	contained ICHILDREN IANCESTORS IALLANCESTORS
 sy	keyword	cscFunction	contained ISATTRIBUTE 
 sy	keyword	cscFunction	contained GROWTH GENMBRS GEN FACTORIAL DISCOUNT DESCENDANTS
-sy	keyword	cscFunction	contained DECLINE CHILDREN CURRMBRRANGE CURLEV CURGEN
+sy	keyword	cscFunction	contained DECLINE DATAEXPORT DATAIMPORTBIN CHILDREN CURRMBRRANGE CURLEV CURGEN
 sy	keyword	cscFunction	contained COMPOUNDGROWTH COMPOUND AVGRANGE AVG ANCESTVAL
 sy	keyword	cscFunction	contained ANCEST ANCESTORS ALLANCESTORS ACCUM ABS ATTRIBUTE ATTRIBUTEBVAL
 sy	keyword	cscFunction	contained REMOVE LIST XREF
@@ -91,8 +96,8 @@ sy	keyword	cscFunction	contained @VARPER @VAR @UDA @TRUNCATE @SYD @SUMRANGE @SUM
 sy	keyword	cscFunction	contained @STDDEVRANGE @STDDEV @SPARENTVAL @SLN @SIBLINGS @SHIFT
 sy	keyword	cscFunction	contained @SANCESTVAL @RSIBLINGS @ROUND @REMAINDER @RELATIVE @PTD
 sy	keyword	cscFunction	contained @PRIOR @POWER @PARENT @PARENTVAL @NPV @NEXT @MOD @MINRANGE @MIN
-sy	keyword	cscFunction	contained @MDSHIFT @MDPARENTVAL @MDANCESTVAL @MAXRANGE @MAX @MATCH @COUNT
-sy	keyword	cscFunction	contained @LSIBLINGS @LEVMBRS @LEV @CURRMBR @RANGE
+sy	keyword	cscFunction	contained @MDSHIFT @MDPARENTVAL @MDALLOCATE @MDANCESTVAL @MAXRANGE @MAX @MATCH @COUNT
+sy	keyword	cscFunction	contained @LSIBLINGS @LEVMBRS @LEV @LIST @CURRMBR @RANGE
 sy	keyword	cscFunction	contained @ISUDA @ISSIBLING @ISSAMELEV @ISSAMEGEN @ISPARENT @ISMBR
 sy	keyword	cscFunction	contained @ISLEV @ISISIBLING @ISIPARENT @ISIDESC @ISICHILD @ISIBLINGS
 sy	keyword	cscFunction	contained @ISIANCEST @ISGEN @ISDESC @ISCHILD @ISANCEST @ISACCTYPE
@@ -103,8 +108,9 @@ sy	keyword	cscFunction	contained @GROWTH @GENMBRS @GEN @FACTORIAL @DISCOUNT @DES
 sy	keyword	cscFunction	contained @DECLINE @CHILDREN @CURRMBRRANGE @CURLEV @CURGEN
 sy	keyword	cscFunction	contained @COMPOUNDGROWTH @COMPOUND @AVGRANGE @AVG @ANCESTVAL
 sy	keyword	cscFunction	contained @ANCEST @ANCESTORS @ALLANCESTORS @ACCUM @ABS @ATTRIBUTE @ATTRIBUTEBVAL
-sy	keyword	cscFunction	contained @REMOVE @LIST @XREF
+sy	keyword	cscFunction	contained @REMOVE @RETURN
 sy	keyword	cscFunction	contained @MEMBER @NAME @CONCATENATE @SUBSTRING
+sy	keyword	cscFunction	contained @XREF @XWRITE
 sy	match	cscFunction	contained "@"
 sy	match	cscError	"@\s*\a*" contains=cscFunction
 
@@ -146,7 +152,7 @@ sy	match	cscCom	"^\s*\<SET\s\+CALCTASKDIMS"
 sy	match	cscCom	"^\s*\<SET\s\+CCTRACKCALC"
 sy	match	cscCom	"^\s*\<SET\s\+CLEARUPDATESTATUS"
 sy	match	cscCom	"^\s*\<SET\s\+CREATEBLOCKONEQ"
-sy	match	cscCom	"^\s*\<SET\s\+CREATENONMISSINGBLK"
+sy	match	cscCom	"^\s*\<SET\s\+CREATEONMISSINGBLK"
 sy	match	cscCom	"^\s*\<SET\s\+FRMLBOTTOMUP"
 sy	match	cscCom	"^\s*\<SET\s\+LOCKBLOCK"
 sy	match	cscCom	"^\s*\<SET\s\+MSG"
@@ -218,6 +224,7 @@ if version >= 508 || !exists("did_csc_syntax_inits")
 
 	HiLink	cscLocal	Comment	
 	HiLink	cscSubVar	Identifier
+	HiLink	cscEnvVar	Identifier
 	HiLink	cscCrossDimen	Special
 
 	delcommand HiLink
